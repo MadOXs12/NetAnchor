@@ -1,24 +1,24 @@
-# ⚓ NetAnchor Pro: The Zero-Drop Network & Gaming Stabilizer
+# âš“ NetAnchor Pro: The Zero-Drop Network & Gaming Stabilizer
 
-> **Engineered by Madoxs** (`darkzOGx`)  
+> **Engineered by Madoxs** (`MadOXs12`)  
 > *The ultimate 1-click utility that eliminates Intel I219-V / Realtek Ethernet drops, slashes packet latency, and unlocks 100% bandwidth for online gaming.*
 
 ---
 
-## 📺 Official Video Demonstration & Proof
+## ðŸ“º Official Video Demonstration & Proof
 
 [![Watch the Official Guide](https://img.youtube.com/vi/G5gHMS4QNto/maxresdefault.jpg)](https://youtu.be/G5gHMS4QNto)
 
-▶ **[Click here to watch the full walkthrough on YouTube](https://youtu.be/G5gHMS4QNto)**
+â–¶ **[Click here to watch the full walkthrough on YouTube](https://youtu.be/G5gHMS4QNto)**
 
 ---
 
-## 🛡️ Provenance & Creator Signature
+## ðŸ›¡ï¸ Provenance & Creator Signature
 ```text
 ================================================================================
 CRITICAL INTELLECTUAL PROPERTY & AUTHENTICITY NOTICE
-Creator & Architect : Madoxs (@darkzOGx)
-Official Repository : https://github.com/darkzOGx/NetAnchor
+Creator & Architect : Madoxs (@MadOXs12)
+Official Repository : https://github.com/MadOXs12/NetAnchor
 Verification Hash   : SHA256-MADOXS-NETANCHOR-ORIGIN-AUTHENTICATED
 Original Release    : November 2026
 ================================================================================
@@ -29,7 +29,7 @@ authorship declaration and link to the official repository and video above.
 
 ---
 
-## 🎯 What Problem Does NetAnchor Solve?
+## ðŸŽ¯ What Problem Does NetAnchor Solve?
 
 ### 1. The Intel I219-V / I225-V Ethernet Drop Bug (Event 27)
 Desktop gaming PCs frequently suffer from sudden, random 2-to-5-second internet dropouts mid-game. In Windows Event Viewer, you will see:
@@ -51,7 +51,7 @@ Windows by default reserves CPU cycles and limits non-multimedia network through
 
 ---
 
-## ⚡ Key Capabilities at a Glance
+## âš¡ Key Capabilities at a Glance
 
 | Feature | Action Taken | Gaming Impact |
 | :--- | :--- | :--- |
@@ -64,13 +64,13 @@ Windows by default reserves CPU cycles and limits non-multimedia network through
 
 ---
 
-## 🚀 How to Run NetAnchor
+## ðŸš€ How to Run NetAnchor
 
 ### 1-Click GUI (Recommended)
 1. Download or clone this repository.
 2. Double-click `NetAnchor.bat`.
 3. Accept the Windows UAC Administrator prompt.
-4. Click **`[ 🚀 1-CLICK FIX EVERYTHING ]`**.
+4. Click **`[ ðŸš€ 1-CLICK FIX EVERYTHING ]`**.
 5. Restart your game and enjoy drop-free, low-ping gameplay.
 
 ### Silent / Headless Mode (For Scripting)
@@ -80,7 +80,7 @@ NetAnchor.bat -Silent -FixAll
 
 ---
 
-## 📜 License & Copyright
+## ðŸ“œ License & Copyright
 
 Released under the **MIT License**.  
-Copyright (c) 2026 **Madoxs** (`darkzOGx`). All rights reserved.
+Copyright (c) 2026 **Madoxs** (`MadOXs12`). All rights reserved.

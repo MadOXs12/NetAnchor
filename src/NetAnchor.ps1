@@ -1,9 +1,9 @@
-﻿<#
+<#
 # =========================================================================
 #   NETANCHOR PRO - ZERO-DROP NETWORK & GAMING OPTIMIZER
 # =========================================================================
-#   Architect & Original Creator : Madoxs (darkzOGx)
-#   Official Project Repository  : https://github.com/darkzOGx/NetAnchor
+#   Architect & Original Creator : Madoxs (MadOXs12)
+#   Official Project Repository  : https://github.com/MadOXs12/NetAnchor
 #   Official Video Demonstration : https://youtu.be/G5gHMS4QNto
 #   Cryptographic Signature Tag  : MADOXS-PROVENANCE-SECURED-ORIGIN-2026
 #   Copyright (c) 2026 Madoxs. All Rights Reserved.
