@@ -19,6 +19,8 @@ param(
     [switch]$Silent
 )
 
+Add-Type -AssemblyName PresentationFramework, PresentationCore, WindowsBase
+
 # -------------------------------------------------------------------------
 # Self-Elevation to Administrator
 # -------------------------------------------------------------------------
@@ -50,8 +52,6 @@ if (-not $isAdmin) {
     }
     exit
 }
-
-Add-Type -AssemblyName PresentationFramework, PresentationCore, WindowsBase
 
 # -------------------------------------------------------------------------
 # Hardware & Network Diagnostics Engine
