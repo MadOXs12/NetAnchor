@@ -1,14 +1,14 @@
-<#
+﻿<#
 # =========================================================================
-#   NETANCHOR PRO - ZERO-DROP NETWORK & GAMING OPTIMIZER
+#   NETANCHOR PRO (QUICK SETUP MACHINE) - ZERO-DROP OPTIMIZER
 # =========================================================================
-#   Architect & Original Creator : Madoxs (MadOXs12)
+#   Architect & Original Creator : MadOxs (@MadOXs12)
 #   Official Project Repository  : https://github.com/MadOXs12/NetAnchor
 #   Official Video Demonstration : https://youtu.be/G5gHMS4QNto
 #   Cryptographic Signature Tag  : MADOXS-PROVENANCE-SECURED-ORIGIN-2026
-#   Copyright (c) 2026 Madoxs. All Rights Reserved.
+#   Copyright (c) 2026 MadOxs. All Rights Reserved.
 #   Notice: Unauthorized re-branding or claiming original authorship
-#   without attribution to Madoxs is prohibited under MIT License terms.
+#   without attribution to MadOxs is prohibited under MIT License terms.
 # =========================================================================
 #>
 
@@ -27,7 +27,7 @@ $isAdmin = $currentPrincipal.IsInRole([Security.Principal.WindowsBuiltInRole]::A
 
 if (-not $isAdmin) {
     if ($Silent) {
-        Write-Error "[NetAnchor by Madoxs] Administrator permissions required."
+        Write-Error "[NetAnchor / Quick Setup Machine by MadOxs] Administrator permissions required."
         exit 1
     }
     $processInfo = New-Object System.Diagnostics.ProcessStartInfo
@@ -42,7 +42,7 @@ if (-not $isAdmin) {
         [System.Diagnostics.Process]::Start($processInfo) | Out-Null
     } catch {
         [System.Windows.MessageBox]::Show(
-            "NetAnchor by Madoxs requires Administrator permissions to modify hardware adapter and network power configurations.",
+            "NetAnchor (Quick Setup Machine) by MadOxs requires Administrator permissions to modify hardware adapter and network power configurations.",
             "Elevation Required",
             [System.Windows.MessageBoxButton]::OK,
             [System.Windows.MessageBoxImage]::Warning
@@ -130,7 +130,7 @@ function Invoke-NetAnchorFix {
         else { Write-Host "[$((Get-Date).ToString('HH:mm:ss'))] $msg" }
     }
 
-    Log "NetAnchor Engine by Madoxs: Starting Zero-Drop Optimization..."
+    Log "Quick Setup Machine (NetAnchor) by MadOxs: Starting Optimization..."
 
     $adapter = Get-NetAdapter -ErrorAction SilentlyContinue | Where-Object { $_.Status -eq 'Up' -and $_.MediaType -match '802.3' } | Select-Object -First 1
     if (-not $adapter) {
@@ -200,7 +200,7 @@ function Invoke-NetAnchorFix {
     netsh int tcp set global autotuninglevel=normal >$null 2>&1
     netsh int tcp set global rss=enabled >$null 2>&1
 
-    Log "✔ SUCCESS: System 100% Anchored by Madoxs Engine!"
+    Log "✔ SUCCESS: System 100% Anchored by MadOxs Engine!"
     Log "Connection is now rock-solid and impervious to idle sleep disconnects."
 }
 
@@ -220,7 +220,7 @@ if ($DiagnoseOnly) {
 [xml]$xaml = @"
 <Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="NetAnchor Pro - Zero-Drop Network Optimizer (by Madoxs)"
+        Title="NetAnchor Pro (Quick Setup Machine) - Zero-Drop Network &amp; Gaming Optimizer"
         Height="720" Width="680"
         WindowStartupLocation="CenterScreen"
         ResizeMode="CanMinimize"
@@ -253,9 +253,9 @@ if ($DiagnoseOnly) {
         <!-- Header -->
         <StackPanel Grid.Row="0" Margin="0,0,0,16">
             <StackPanel Orientation="Horizontal">
-                <TextBlock Text="⚓ NetAnchor" FontSize="26" FontWeight="Bold" Foreground="#58A6FF"/>
+                <TextBlock Text="⚡ NetAnchor" FontSize="26" FontWeight="Bold" Foreground="#38BDF8"/>
                 <Border Background="#238636" CornerRadius="4" Padding="6,2" Margin="10,4,0,4">
-                    <TextBlock Text="PRO v1.0" FontSize="11" FontWeight="Bold" Foreground="#FFFFFF"/>
+                    <TextBlock Text="QUICK SETUP MACHINE" FontSize="11" FontWeight="Bold" Foreground="#FFFFFF"/>
                 </Border>
                 <Border Background="#8957E5" CornerRadius="4" Padding="6,2" Margin="6,4,0,4">
                     <TextBlock Text="BY MADOXS" FontSize="11" FontWeight="Bold" Foreground="#FFFFFF"/>
@@ -350,8 +350,8 @@ if ($DiagnoseOnly) {
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
-            <TextBlock Text="Architect: Madoxs | Authentic Master Edition" FontSize="11" Foreground="#6E7681" VerticalAlignment="Center"/>
-            <TextBlock Grid.Column="1" Text="📺 Video Proof: youtu.be/G5gHMS4QNto" FontSize="11" Foreground="#58A6FF" VerticalAlignment="Center"/>
+            <TextBlock Text="Architect: MadOxs | Quick Setup Machine" FontSize="11" Foreground="#6E7681" VerticalAlignment="Center"/>
+            <TextBlock Grid.Column="1" Text="📺 Video Guide: youtu.be/G5gHMS4QNto" FontSize="11" Foreground="#58A6FF" VerticalAlignment="Center"/>
         </Grid>
     </Grid>
 </Window>
@@ -413,14 +413,14 @@ $btnFixAll.Add_Click({
     $btnFixAll.Background = [System.Windows.Media.Brushes]::ForestGreen
     
     [System.Windows.MessageBox]::Show(
-        "NetAnchor by Madoxs has successfully secured your system!`r`n`r`n" +
+        "Quick Setup Machine (NetAnchor) by MadOxs has successfully secured your system!`r`n`r`n" +
         "✔ Ethernet power drops permanently disabled (EEE / ULP / ASPM Off)`r`n" +
         "✔ Gaming packet spikes eliminated (LSO Off & Nagle's Algorithm tuned)`r`n" +
         "✔ Windows Network Throttling removed & 100% CPU priority given to Games`r`n" +
         "✔ Cloudflare Gaming DNS (1.1.1.1) active`r`n`r`n" +
         "You can now game and stream without mid-match dropouts!`r`n`r`n" +
         "Watch full demonstration: https://youtu.be/G5gHMS4QNto",
-        "NetAnchor by Madoxs - System Secured",
+        "NetAnchor by MadOxs - System Secured",
         [System.Windows.MessageBoxButton]::OK,
         [System.Windows.MessageBoxImage]::Information
     )
@@ -432,7 +432,7 @@ $btnRescan.Add_Click({
     Write-GuiLog "Scan complete."
 })
 
-Write-GuiLog "NetAnchor Engine by Madoxs initialized."
+Write-GuiLog "Quick Setup Machine Engine by MadOxs initialized."
 Write-GuiLog "Checking current hardware and network telemetry..."
 Refresh-GuiStatus
 Write-GuiLog "Ready. Click '1-CLICK FIX EVERYTHING' to eliminate dropouts."

@@ -1,10 +1,11 @@
 @echo off
-title NetAnchor Pro - Zero-Drop Network & Gaming Optimizer
+title NetAnchor Pro (Quick Setup Machine) - Zero-Drop Network & Gaming Optimizer
 setlocal EnableDelayedExpansion
 
 :: -------------------------------------------------------------------------
-:: NetAnchor Root Launcher
-:: Automatically requests Administrator elevation and boots the engine
+:: NetAnchor Pro (Quick Setup Machine) - Root Launcher
+:: Developed by MadOxs (@MadOXs12)
+:: Official Video: https://youtu.be/G5gHMS4QNto
 :: -------------------------------------------------------------------------
 
 :: Check Administrator permissions
@@ -21,11 +22,12 @@ set "CORE_SCRIPT=%SCRIPT_DIR%src\NetAnchor.ps1"
 
 if not exist "%CORE_SCRIPT%" (
     echo [ERROR] Could not find core script at: "%CORE_SCRIPT%"
+    echo Please ensure the "src" folder exists alongside this file.
     pause
     exit /b 1
 )
 
-:: Run NetAnchor PowerShell Engine
+:: Run Engine
 powershell -NoProfile -ExecutionPolicy Bypass -File "%CORE_SCRIPT%" %*
 
 exit /b %errorlevel%

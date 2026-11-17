@@ -1,5 +1,4 @@
-# Git ignore for NetAnchor
-*.log
 *.tmp
+*.log
 .vscode/
-.idea/
+push_to_github.bat
