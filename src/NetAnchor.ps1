@@ -97,7 +97,7 @@ function Get-NetAnchorDiagnostics {
         if (Test-Path $sysProfile) {
             $throttle = (Get-ItemProperty -Path $sysProfile -Name NetworkThrottlingIndex -ErrorAction SilentlyContinue).NetworkThrottlingIndex
             $resp     = (Get-ItemProperty -Path $sysProfile -Name SystemResponsiveness -ErrorAction SilentlyContinue).SystemResponsiveness
-            if ($throttle -ne 0xffffffff -or $resp -ne 0) {
+            if (([int64]$throttle -ne 4294967295 -and [int64]$throttle -ne -1) -or $resp -ne 0) {
                 $results.NetworkThrottled = $true
             }
         }
@@ -148,8 +148,10 @@ function Invoke-NetAnchorFix {
         Set-NetAdapterAdvancedProperty -Name $aName -RegistryKeyword 'EnableK1' -RegistryValue '0' -ErrorAction SilentlyContinue
         Set-NetAdapterAdvancedProperty -Name $aName -RegistryKeyword 'ReduceSpeedOnPowerDown' -RegistryValue '0' -ErrorAction SilentlyContinue
 
-        # 2. Bufferbloat & Large Send Offload Spikes
-        Log "Stage 2/7: Disabling Large Send Offload (LSO) to stop packet buffer spikes..."
+        # 2. Prevent Buffer Overflows & Bufferbloat Spikes
+        Log "Stage 2/7: Expanding packet buffers to 2048 & disabling Large Send Offload..."
+        Set-NetAdapterAdvancedProperty -Name $aName -RegistryKeyword '*ReceiveBuffers' -RegistryValue '2048' -ErrorAction SilentlyContinue
+        Set-NetAdapterAdvancedProperty -Name $aName -RegistryKeyword '*TransmitBuffers' -RegistryValue '2048' -ErrorAction SilentlyContinue
         Set-NetAdapterAdvancedProperty -Name $aName -RegistryKeyword '*LsoV2IPv4' -RegistryValue '0' -ErrorAction SilentlyContinue
         Set-NetAdapterAdvancedProperty -Name $aName -RegistryKeyword '*LsoV2IPv6' -RegistryValue '0' -ErrorAction SilentlyContinue
 
